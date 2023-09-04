@@ -10,6 +10,5 @@ public class Task6 {
             System.out.printf("1/%d = %.6f%n", i, 1.0 / i);
         }
 
-        System.out.printf("Сумма первых %d чисел гармонического ряда: %.6f%n", n, sum);
     }
 }
