@@ -1,4 +1,4 @@
-public class TheAuthor {
+public class TestAuthor {
     public static void main(String[] args) {
         Author a1 = new Author("John", "johngosip1994@gmail.com", 'm');
 
