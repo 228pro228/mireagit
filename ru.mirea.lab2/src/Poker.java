@@ -30,8 +30,7 @@ public class Poker {
         }
 
         for (int i = 0; i < kolvo; i++) {
-            Random random = new Random();
-            int card = i + random.nextInt(players - i);
+            int card = i + (int) (Math.random() * (kolvo - i));
             String x = koloda[card];
             koloda[card] = koloda[i];
             koloda[i] = x;
@@ -40,7 +39,7 @@ public class Poker {
         for (int i = 0; i < players * kolinkoloda; i++) {
             System.out.println(koloda[i]);
             if (i % kolinkoloda == kolinkoloda - 1)
-                System.exit(0);
+                System.out.println();
         }
 
 
