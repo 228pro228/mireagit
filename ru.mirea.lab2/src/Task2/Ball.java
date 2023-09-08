@@ -1,3 +1,5 @@
+package Task2;
+
 public class Ball {
     private double x;
     private double y;

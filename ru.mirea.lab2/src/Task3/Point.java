@@ -1,3 +1,5 @@
+package Task3;
+
 public class Point {
     private double x;
     private double y;

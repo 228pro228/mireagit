@@ -1,3 +1,5 @@
+package Task6;
+
 public class Circle2 {
     private double r;
 

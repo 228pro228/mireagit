@@ -1,3 +1,5 @@
+package Task7;
+
 public class Book {
     private String author;
     private String name;

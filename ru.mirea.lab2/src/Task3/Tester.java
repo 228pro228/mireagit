@@ -1,3 +1,5 @@
+package Task3;
+
 public class Tester {
     private Circle[] circles;
     private int count;
@@ -19,7 +21,7 @@ public class Tester {
 
     public void printArray() {
         for (int i = 0; i < count; i++) {
-            System.out.println("Circle " + (i + 1) + ": center - " + circles[i].getCenter().getX() + ", " + circles[i].getCenter().getY() + "; radius - " + circles[i].getRadius());
+            System.out.println("Task3.Circle " + (i + 1) + ": center - " + circles[i].getCenter().getX() + ", " + circles[i].getCenter().getY() + "; radius - " + circles[i].getRadius());
         }
     }
 
