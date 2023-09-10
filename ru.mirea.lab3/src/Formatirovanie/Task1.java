@@ -19,7 +19,7 @@ public class Task1 {
         double inDol = task1.convert(sum);
 
         Locale locRU = new Locale("ru", "RU");
-        Locale locUS = new Locale("us", "US");
+        Locale locUS = Locale.US;
 
         NumberFormat numberFormat1 = NumberFormat.getCurrencyInstance(locRU);
         System.out.println("Сумма в RUB: " + numberFormat1.format(sum));
