@@ -121,7 +121,7 @@ class Atelier {
 public class Studio {
     public static void main(String[] args) {
         Clothes[] allClothes = {
-                new TShirt(ClothingSize.XXS, 20.0, "Красный"),
+                new TShirt(ClothingSize.L, 20.0, "Красный"),
                 new Tie(ClothingSize.S, 174.0, "Черный"),
                 new Pants(ClothingSize.L, 350.0, "Красный"),
         };
