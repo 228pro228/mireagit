@@ -2,9 +2,7 @@ import java.util.*;
 
 enum ProductCategory {
     ELECTRONICS,
-    CLOTHING,
-    BOOKS,
-    SPORTS
+    CLOTHING
 }
 
 class Product {
@@ -95,10 +93,8 @@ class OnlineStore {
     }
 
     private void initializeProducts() {
-        productList.add(new Product("Лaptop", 800.0, ProductCategory.ELECTRONICS));
+        productList.add(new Product("Ноутбук", 800.0, ProductCategory.ELECTRONICS));
         productList.add(new Product("Футболка", 20.0, ProductCategory.CLOTHING));
-        productList.add(new Product("Книга", 15.0, ProductCategory.BOOKS));
-        productList.add(new Product("Футбольный мяч", 30.0, ProductCategory.SPORTS));
     }
 
     public void login(String username, String password) {
