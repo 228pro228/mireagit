@@ -20,7 +20,7 @@ public class Task3 extends JFrame {
 
     public static void main(String[] args) {
         if (args.length != 1) {
-            System.out.println("Usage: java DisplayImage <image_path>");
+            System.out.println("Usage: image.jpg");
             return;
         }
 
