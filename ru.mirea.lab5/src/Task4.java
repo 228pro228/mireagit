@@ -1,6 +1,7 @@
 import javax.swing.*;
 import java.awt.*;
 import java.awt.image.BufferedImage;
+import java.lang.Thread;
 
 public class Task4 extends JPanel implements Runnable {
     private static final int WIDTH = 400;
@@ -44,26 +45,12 @@ public class Task4 extends JPanel implements Runnable {
 
     @Override
     public void run() {
-        long startTime;
-        long sleepTime;
 
         while (running) {
-            startTime = System.currentTimeMillis();
 
             // Обновляем текущий кадр
             repaint();
             currentFrame = (currentFrame + 1) % frames.length;
-
-            // Определяем время для ожидания
-            sleepTime = 1000 / FRAME_RATE - (System.currentTimeMillis() - startTime);
-
-            if (sleepTime > 0) {
-                try {
-                    Thread.sleep(sleepTime);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-            }
         }
     }
 
@@ -75,22 +62,15 @@ public class Task4 extends JPanel implements Runnable {
         }
     }
 
-    public void stopAnimation() {
-        running = false;
-        animationThread = null;
-    }
-
     public static void main(String[] args) {
-        SwingUtilities.invokeLater(() -> {
-            JFrame frame = new JFrame("Animation Example");
-            Task4 animation = new Task4();
-            frame.add(animation);
-            frame.pack();
-            frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-            frame.setVisible(true);
+        JFrame frame = new JFrame("Animation Example");
+        Task4 animation = new Task4();
+        frame.add(animation);
+        frame.pack();
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setVisible(true);
 
-            // Запускаем анимацию
-            animation.startAnimation();
-        });
+        // Запускаем анимацию
+        animation.startAnimation();
     }
 }
