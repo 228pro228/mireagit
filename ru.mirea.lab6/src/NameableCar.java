@@ -1,7 +1,7 @@
-public class Car implements Nameable {
+public class NameableCar implements Nameable {
     private String name;
 
-    public Car(String name) {
+    public NameableCar(String name) {
         this.name = name;
     }
 

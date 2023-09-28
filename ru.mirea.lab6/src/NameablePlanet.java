@@ -1,7 +1,7 @@
-public class Planet implements Nameable {
+public class NameablePlanet implements Nameable {
     private String name;
 
-    public Planet(String name) {
+    public NameablePlanet(String name) {
         this.name = name;
     }
 
