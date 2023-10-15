@@ -59,23 +59,11 @@ public class MyStringBuilder {
         return this;
     }
 
-    //TODO
-    public MyStringBuilder trimToSize(int size) {
-        //strBuilder.trimToSize();
-        return this;
-    }
-
     public void printList() {
         for (AbstractCommand command : commands) {
             System.out.println(command);
         }
 
-    }
-
-    //TODO
-    public MyStringBuilder substring(int start, int end) {
-        this.add(new SubSequenceCommand(start, end));
-        return this;
     }
 
     private StringBuilder build() {
