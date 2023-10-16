@@ -7,23 +7,16 @@ public class Task12 {
 
     public static void printOddNumbersInSequence() {
         Scanner scanner = new Scanner(System.in);
-        ArrayList<Integer> numbers = new ArrayList<>();
+        int number = scanner.nextInt();
 
-        // Считываем числа и сохраняем их в списке
-        int number;
-        while (true) {
-            number = scanner.nextInt();
-            if (number == 0) {
-                break;
-            }
-            numbers.add(number);
+        if (number == 0) {
+            return; // Базовый случай: если введено 0, завершаем рекурсию
         }
 
-        // Выводим нечетные числа
-        for (int num : numbers) {
-            if (num % 2 != 0) {
-                System.out.println(num);
-            }
+        if (number % 2 != 0) {
+            System.out.println(number); // Выводим нечетное число
         }
+
+        printOddNumbersInSequence(); // Рекурсивно вызываем функцию для следующего числа
     }
 }
