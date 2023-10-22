@@ -21,7 +21,7 @@ public class MergeAndSortStudents {
         List<Student> mergedList = new ArrayList<>(list1);
         mergedList.addAll(list2);
 
-        // Сортируем объединенный список по какому-либо полю, например, по имени
+        // Сортируем объединенный список по имени
         Collections.sort(mergedList, (s1, s2) -> s1.getFirstName().compareTo(s2.getFirstName()));
 
         // Выводим отсортированный список
